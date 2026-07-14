@@ -2,7 +2,7 @@
 
 A multi-label classification system that detects five types of intracranial hemorrhage from head CT images, built on the RSNA Intracranial Hemorrhage Detection dataset.
 
-The final model — **EfficientNet-B7** fine-tuned with MONAI — reaches **75.28% validation accuracy**, **0.86 precision**, **0.69 recall**, and **0.76 F1-score** across all six labels.
+The final model, **EfficientNet-B7** fine-tuned with MONAI, reaches **75.28% validation accuracy**, **0.86 precision**, **0.69 recall**, and **0.76 F1-score** across all six labels.
 
 ---
 
