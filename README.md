@@ -41,12 +41,12 @@ Covers the full data pipeline before training:
 
 End-to-end training and evaluation pipeline using **MONAI** and **PyTorch**:
 
-1. **Data loading** — Dictionary-based MONAI transforms with differentiated pipelines:
+1. **Data loading**: Dictionary-based MONAI transforms with differentiated pipelines:
    - *Training*: `LoadImaged` → `EnsureChannelFirstd` → `ScaleIntensityd` → `Resized(128×128)` → `MedianSmoothd` → `AdjustContrastd` → `RandFliped` → `RandRotated(±15°)` → `RandZoomd(0.9–1.1)` → `ToTensord`
    - *Validation/Test*: Same base transforms without augmentation
-2. **Model** — `EfficientNet-B7` pretrained on ImageNet, modified for 1-channel grayscale input and 6-class multi-label output.
-3. **Training** — `BCEWithLogitsLoss`, Adam optimizer (lr=1e-4), batch size 32, 15 epochs with best-model checkpointing on validation accuracy.
-4. **Evaluation** — Precision, recall, F1-score, overall confusion matrix, and per-class confusion matrices with individual accuracy scores.
+2. **Model**: `EfficientNet-B7` pretrained on ImageNet, modified for 1-channel grayscale input and 6-class multi-label output.
+3. **Training**: `BCEWithLogitsLoss`, Adam optimizer (lr=1e-4), batch size 32, 15 epochs with best-model checkpointing on validation accuracy.
+4. **Evaluation**: Precision, recall, F1-score, overall confusion matrix and per-class confusion matrices with individual accuracy scores.
    
 ---
 
