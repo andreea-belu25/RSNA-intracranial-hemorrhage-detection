@@ -25,11 +25,11 @@ Each image can have **multiple labels simultaneously** (multi-label classificati
 
 Covers the full data pipeline before training:
 
-1. **Dataset class** — Custom `RSNAHemorrhageDataset` (PyTorch `Dataset`) with lazy loading and CSV label parsing for all six categories.
-2. **Train/validation split** — 80/20 split using `train_test_split` with `random_state=42` for reproducibility.
-3. **Class distribution analysis** — Bar charts across train, validation, and test sets revealing class imbalance.
-4. **Visual analysis** — Side-by-side CT samples for each hemorrhage type, with anatomical observations on hyperdense patterns, location, and symmetry.
-5. **Data consistency checks** — Verification of channel count, image dimensions, and pixel value ranges.
+1. **Dataset class**: Custom `RSNAHemorrhageDataset` (PyTorch `Dataset`) with lazy loading and CSV label parsing for all six categories.
+2. **Train/validation split**: 80/20 split using `train_test_split` with `random_state=42` for reproducibility.
+3. **Class distribution analysis**: Bar charts across train, validation and test sets revealing class imbalance.
+4. **Visual analysis**: Side-by-side CT samples for each hemorrhage type, with anatomical observations on hyperdense patterns, location and symmetry.
+5. **Data consistency checks**: Verification of channel count, image dimensions and pixel value ranges.
 6. **Preprocessing operations**:
    - *Contrast*: CLAHE, Histogram Equalization, Random Adjust Contrast, Gaussian Sharpen
    - *Noise reduction*: Gaussian Smooth, Random Gaussian Smooth, Median Filter
